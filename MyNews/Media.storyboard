@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Tc-yb-tXo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--视频-->
+        <scene sceneID="QUf-qP-nJg">
+            <objects>
+                <navigationController id="3Tc-yb-tXo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="视频" image="MediaImage" selectedImage="MediaImageHigh" id="ijz-hr-8Qk"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CP7-Ne-rXi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NDY-84-Y4g" kind="relationship" relationship="rootViewController" id="eyL-yf-IQC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ga3-Us-rJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682" y="259"/>
+        </scene>
+        <!--视频-->
+        <scene sceneID="NhS-vt-B0l">
+            <objects>
+                <viewController id="NDY-84-Y4g" userLabel="视频" customClass="MediaCtrl" customModule="MyNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XGM-6L-nTK"/>
+                        <viewControllerLayoutGuide type="bottom" id="19r-L4-5Wq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U7x-9G-ZAh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bty-G4-lad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDe-6m-J0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="282"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MediaImage" width="25" height="25"/>
+        <image name="MediaImageHigh" width="25" height="25"/>
+    </resources>
+</document>

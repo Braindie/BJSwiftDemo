@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4hP-9B-9Sk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--我的新闻-->
+        <scene sceneID="zNM-WG-a0T">
+            <objects>
+                <viewController id="yBa-fs-gNI" customClass="NewsCtrl" customModule="MyNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v6B-vF-ZeD"/>
+                        <viewControllerLayoutGuide type="bottom" id="GRG-Ff-vN5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hGZ-Vc-mb1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的新闻" id="rah-Sf-pVx">
+                        <barButtonItem key="leftBarButtonItem" title="Logo" id="2PN-kL-ael"/>
+                        <barButtonItem key="rightBarButtonItem" title="天气" id="pIH-Xf-gOd"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kL-iG-qrz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-208" y="690"/>
+        </scene>
+        <!--新闻-->
+        <scene sceneID="WQ6-hX-11J">
+            <objects>
+                <navigationController id="4hP-9B-9Sk" userLabel="新闻" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="新闻" image="NewsImage" selectedImage="NewsImageHigh" id="rUS-XX-XzU" userLabel="新闻"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F5f-Xb-JVS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yBa-fs-gNI" kind="relationship" relationship="rootViewController" id="dKc-n3-mpP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kl5-kT-zZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1029" y="682"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NewsImage" width="25" height="25"/>
+        <image name="NewsImageHigh" width="25" height="25"/>
+    </resources>
+</document>
