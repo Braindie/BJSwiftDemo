@@ -1,2 +1,2 @@
 # SwiftNews
-使用swift编写的网易新闻Demo
+使用SB搭建了一个标签栏

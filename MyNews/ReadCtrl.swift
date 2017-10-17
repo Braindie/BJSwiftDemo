@@ -55,14 +55,14 @@ class ReadCtrl: UIViewController {
 
 extension ReadCtrl : UITableViewDelegate, UITableViewDataSource{
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return baby.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let readId = "readCellID"
-        let cell = ReadCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: readId)
-        cell.backgroundColor = UIColor.orangeColor()
+        let cell = ReadCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: readId)
+        cell.backgroundColor = UIColor.orange
         return cell
     }
     
