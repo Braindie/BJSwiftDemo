@@ -12,13 +12,27 @@ class ReadCtrl: UIViewController {
 
     @IBOutlet weak var myTableView: UITableView!
     
-    var baby = ["宝宝0","宝宝1","宝宝2","宝宝3","宝宝4","宝宝5","宝宝6","宝宝7","宝宝8","宝宝9","宝宝10","宝宝11"]
+    var myDataArray: NSMutableArray!
+    
+    
+//    var baby = ["宝宝0","宝宝1","宝宝2","宝宝3","宝宝4","宝宝5","宝宝6","宝宝7","宝宝8","宝宝9","宝宝10","宝宝11"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
         automaticallyAdjustsScrollViewInsets = false
+        
+        let path = Bundle.main.path(forResource: "wotMain", ofType: "json")
+        let jsonURL = URL(fileURLWithPath: path!)
+        
+        let data = NSData.dataWithContentsOfMappedFile(path as! String) as! NSData
+        
+        let dict:NSDictionary = try!  JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions()) as! NSDictionary
+        myDataArray = dict.object(forKey: "data") as! NSArray as! NSMutableArray
+        
+        
+        
 
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
@@ -29,6 +43,19 @@ class ReadCtrl: UIViewController {
         
         //使用xib好像需要注册
         self.myTableView.register(UINib(nibName:"ReadCell" ,bundle:nil), forCellReuseIdentifier: "ReadCell")
+        
+        
+
+        
+                
+  
+//        let d:Data = Data(contentsOf: jsonURL)
+        
+//        let json:Any = JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.mutableContainers)
+//        let jsonDic = jsonas!Dictionary<String,Any>
+//        let datalist = jsonDic["data"]as!NSArray
+//        print(datalist)//输出数据
+    
         
     }
 
@@ -54,13 +81,21 @@ class ReadCtrl: UIViewController {
 extension ReadCtrl : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return baby.count
+        return myDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let readId = "ReadCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: readId, for: indexPath)
+        
+        if myDataArray.count != 0{
+            
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 

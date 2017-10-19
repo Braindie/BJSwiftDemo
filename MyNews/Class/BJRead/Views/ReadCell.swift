@@ -9,6 +9,9 @@
 import UIKit
 
 class ReadCell: UITableViewCell {
+    @IBOutlet weak var titleImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
