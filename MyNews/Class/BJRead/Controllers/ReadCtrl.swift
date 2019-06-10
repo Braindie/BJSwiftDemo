@@ -9,8 +9,8 @@
 import UIKit
 
 class ReadCtrl: UIViewController {
-
-    @IBOutlet weak var myTableView: UITableView!
+    
+    var myTableView: UITableView!
     
     var myDataArray: NSMutableArray!
     
@@ -24,22 +24,22 @@ class ReadCtrl: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         
         let path = Bundle.main.path(forResource: "wotMain", ofType: "json")
-        let jsonURL = URL(fileURLWithPath: path!)
+        _ = URL(fileURLWithPath: path!)
         
         let data = NSData.dataWithContentsOfMappedFile(path as! String) as! NSData
         
         let dict:NSDictionary = try!  JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions()) as! NSDictionary
-        myDataArray = dict.object(forKey: "data") as! NSArray as! NSMutableArray
-        
-        
+//        myDataArray = dict.object(forKey: "data") as! NSArray as? NSMutableArray
         
 
+        self.myTableView = UITableView.init(frame: self.view.bounds, style: UITableView.Style.plain)
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
         self.myTableView.estimatedRowHeight = 150
-        self.myTableView.rowHeight = UITableViewAutomaticDimension
+        self.myTableView.rowHeight = UITableView.automaticDimension
         self.myTableView.sectionFooterHeight = 5
         self.myTableView.sectionHeaderHeight = 5
+        self.view.addSubview(self.myTableView)
         
         //使用xib好像需要注册
         self.myTableView.register(UINib(nibName:"ReadCell" ,bundle:nil), forCellReuseIdentifier: "ReadCell")
@@ -81,16 +81,13 @@ class ReadCtrl: UIViewController {
 extension ReadCtrl : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myDataArray.count
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let readId = "ReadCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: readId, for: indexPath)
         
-        if myDataArray.count != 0{
-            
-        }
         return cell
     }
     

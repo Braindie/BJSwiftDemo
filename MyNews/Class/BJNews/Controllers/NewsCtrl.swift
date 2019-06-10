@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Alamofire
+//import Alamofire
 
 class NewsCtrl: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         self.buildUI()
         
         self.requestData()
@@ -36,12 +36,12 @@ class NewsCtrl: UIViewController {
     func requestData(){
         
 //        let parameters:Dictionary = ["key":"93c921ea8b0348af8e8e7a6a273c41bd"]
-        Alamofire.request("http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1",method: .get).responseJSON{ (responds) in
-            
-            
-            print("----------\(responds)")
-
-        }
+//        Alamofire.request("http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1",method: .get).responseJSON{ (responds) in
+//
+//
+//            print("----------\(responds)")
+//
+//        }
         
     }
     
@@ -62,8 +62,8 @@ extension NewsCtrl : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let identifier = "mainCell"
-        let cell = NewsCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: identifier)
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        let cell = NewsCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: identifier)
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
     }
     
