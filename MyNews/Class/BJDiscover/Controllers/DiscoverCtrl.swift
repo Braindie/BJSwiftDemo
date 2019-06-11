@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiscoverCtrl: UIViewController {
+class DiscoverCtrl: BJBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

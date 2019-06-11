@@ -7,56 +7,68 @@
 //
 
 import UIKit
-//import Alamofire
+import Alamofire
+import SwiftyJSON
 
-class NewsCtrl: UIViewController {
+class NewsCtrl: BJBaseViewController {
+    
+    var myDataArray = NSMutableArray()
+    
+    let tableView = UITableView()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        self.navigationItem.title = "首页"
+        
         self.buildUI()
         
         self.requestData()
-        
-
-        
     }
     
     func buildUI(){
-        let tableView = UITableView()
-        tableView.frame = self.view.bounds
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.frame = self.view.bounds
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
-        //使用代码定义cell好像不用注册
-        //        tableView.register(NewsCell.self, forCellReuseIdentifier: "cell")
-        self.view.addSubview(tableView)
+        self.view.addSubview(self.tableView)
     }
     
     func requestData(){
         
-//        let parameters:Dictionary = ["key":"93c921ea8b0348af8e8e7a6a273c41bd"]
-//        Alamofire.request("http://116.211.167.106/api/live/aggregation?uid=133825214&interest=1",method: .get).responseJSON{ (responds) in
-//
-//
-//            print("----------\(responds)")
-//
-//        }
-        
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+        Alamofire.request("http://v.juhe.cn/toutiao/index?key=c76f60c92d392d0a59d7cac0cae97a44",method: .get).responseJSON{ (responds) in
 
+            let json = responds.result.value
+            let dic = JSON(json!)
+            if dic["error_code"] == 0 {
+                print("请求成功")
+                print(dic["result"]["data"])
+                
+                let dataArray = dic["result"]["data"]
+                for index in 0...dataArray.count-1 {
+                    let model = NewsModel()
+                    model.title = dataArray[index]["title"].string
+                    model.thumbnail_pic_s = dataArray[index]["thumbnail_pic_s"].string
+                    model.author_name = dataArray[index]["author_name"].string
+                    model.date = dataArray[index]["date"].string
+                    model.category = dataArray[index]["category"].string
+                    model.url = dataArray[index]["url"].string
+                    self.myDataArray.add(model)
+                }
+                self.tableView.reloadData()
+                
+            }else {
+                print("请求失败")
+            }
+        }
+    }
 }
 
 extension NewsCtrl : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.myDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,6 +76,11 @@ extension NewsCtrl : UITableViewDataSource,UITableViewDelegate{
         let identifier = "mainCell"
         let cell = NewsCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: identifier)
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        if self.myDataArray.count != 0  {
+            let model: NewsModel = self.myDataArray[indexPath.row] as! NewsModel
+            cell.titleLabel?.text = model.title
+            cell.detailLabel?.text = model.author_name
+        }
         return cell
     }
     
@@ -80,7 +97,5 @@ extension NewsCtrl : UITableViewDataSource,UITableViewDelegate{
         self.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
         self.hidesBottomBarWhenPushed = false//这样back回来的时候，tabBar会恢复正常显示，不然就。。。哈哈。
-        
     }
-    
 }

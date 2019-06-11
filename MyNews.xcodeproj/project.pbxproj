@@ -11,6 +11,9 @@
 		E53448F51D22618D00C38AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53448F41D22618D00C38AB4 /* AppDelegate.swift */; };
 		E53448FC1D22618D00C38AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53448FB1D22618D00C38AB4 /* Assets.xcassets */; };
 		E54A11CA22AE5A900000B007 /* BJTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A11C922AE5A900000B007 /* BJTabbarViewController.swift */; };
+		E54A11CC22AF5C090000B007 /* BJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A11CB22AF5C090000B007 /* BJBaseViewController.swift */; };
+		E54A11CF22AF79D00000B007 /* BJConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A11CE22AF79D00000B007 /* BJConfig.swift */; };
+		E54A11D122AF7C6F0000B007 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A11D022AF7C6F0000B007 /* NewsModel.swift */; };
 		E54C38051F97064C00825F8F /* DiscoverCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C37E81F97064C00825F8F /* DiscoverCtrl.swift */; };
 		E54C38091F97064C00825F8F /* MeCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C37F01F97064C00825F8F /* MeCtrl.swift */; };
 		E54C380B1F97064C00825F8F /* MediaCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C37F61F97064C00825F8F /* MediaCtrl.swift */; };
@@ -32,6 +35,9 @@
 		E53448FB1D22618D00C38AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E53449001D22618D00C38AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E54A11C922AE5A900000B007 /* BJTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJTabbarViewController.swift; sourceTree = "<group>"; };
+		E54A11CB22AF5C090000B007 /* BJBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJBaseViewController.swift; sourceTree = "<group>"; };
+		E54A11CE22AF79D00000B007 /* BJConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJConfig.swift; sourceTree = "<group>"; };
+		E54A11D022AF7C6F0000B007 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		E54C37E81F97064C00825F8F /* DiscoverCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCtrl.swift; sourceTree = "<group>"; };
 		E54C37F01F97064C00825F8F /* MeCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCtrl.swift; sourceTree = "<group>"; };
 		E54C37F61F97064C00825F8F /* MediaCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCtrl.swift; sourceTree = "<group>"; };
@@ -107,13 +113,23 @@
 			isa = PBXGroup;
 			children = (
 				E54A11C922AE5A900000B007 /* BJTabbarViewController.swift */,
+				E54A11CB22AF5C090000B007 /* BJBaseViewController.swift */,
 			);
 			path = BJBase;
+			sourceTree = "<group>";
+		};
+		E54A11CD22AF79BB0000B007 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E54A11CE22AF79D00000B007 /* BJConfig.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		E54C37E41F97064C00825F8F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				E54A11CD22AF79BB0000B007 /* Config */,
 				E54A11C822AE5A530000B007 /* BJBase */,
 				E54C37F91F97064C00825F8F /* BJNews */,
 				E54C37FD1F97064C00825F8F /* BJRead */,
@@ -242,6 +258,7 @@
 		E54C37FB1F97064C00825F8F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E54A11D022AF7C6F0000B007 /* NewsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,11 +410,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyNews/Pods-MyNews-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -412,12 +435,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53448F51D22618D00C38AB4 /* AppDelegate.swift in Sources */,
+				E54A11CC22AF5C090000B007 /* BJBaseViewController.swift in Sources */,
 				E54C380D1F97064C00825F8F /* ReadCtrl.swift in Sources */,
 				E54A11CA22AE5A900000B007 /* BJTabbarViewController.swift in Sources */,
 				E54C38121F9723B300825F8F /* NewsCtrl.swift in Sources */,
 				E54C38091F97064C00825F8F /* MeCtrl.swift in Sources */,
 				E54C380B1F97064C00825F8F /* MediaCtrl.swift in Sources */,
+				E54A11CF22AF79D00000B007 /* BJConfig.swift in Sources */,
 				E56DB05E1F98889A0000A45D /* NewsDetailCtrl.swift in Sources */,
+				E54A11D122AF7C6F0000B007 /* NewsModel.swift in Sources */,
 				E54C38191F97401A00825F8F /* ReadCell.swift in Sources */,
 				E54C38161F9728B000825F8F /* NewsCell.swift in Sources */,
 				E54C38051F97064C00825F8F /* DiscoverCtrl.swift in Sources */,

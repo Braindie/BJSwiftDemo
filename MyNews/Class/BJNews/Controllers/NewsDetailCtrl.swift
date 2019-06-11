@@ -8,14 +8,14 @@
 
 import UIKit
 
-class NewsDetailCtrl: UIViewController {
+class NewsDetailCtrl: BJBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.navigationItem.title = "详情"
-        self.view.backgroundColor = UIColor.orange
+        self.view.backgroundColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {

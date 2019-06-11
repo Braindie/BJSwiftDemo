@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeCtrl: UIViewController {
+class MeCtrl: BJBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

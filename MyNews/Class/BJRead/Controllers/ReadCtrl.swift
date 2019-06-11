@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReadCtrl: UIViewController {
+class ReadCtrl: BJBaseViewController {
     
     var myTableView: UITableView!
     

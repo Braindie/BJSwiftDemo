@@ -21,9 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         let root = BJTabbarViewController ()
-        let nav : UINavigationController = UINavigationController.init(rootViewController: root)
         
-        self.window?.rootViewController = nav
+        self.window?.rootViewController = root
         return true
     }
 

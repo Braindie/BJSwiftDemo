@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MediaCtrl: UIViewController {
+class MediaCtrl: BJBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
