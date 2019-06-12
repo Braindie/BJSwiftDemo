@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 class NewsCtrl: BJBaseViewController {
     
@@ -80,6 +81,8 @@ extension NewsCtrl : UITableViewDataSource,UITableViewDelegate{
             let model: NewsModel = self.myDataArray[indexPath.row] as! NewsModel
             cell.titleLabel?.text = model.title
             cell.detailLabel?.text = model.author_name
+            let url = URL(string: model.thumbnail_pic_s ?? "")
+            cell.titleImage?.kf.setImage(with: url)
         }
         return cell
     }
@@ -94,6 +97,7 @@ extension NewsCtrl : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = NewsDetailCtrl.init()
+        vc.model = self.myDataArray[indexPath.row] as? NewsModel
         self.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
         self.hidesBottomBarWhenPushed = false//这样back回来的时候，tabBar会恢复正常显示，不然就。。。哈哈。

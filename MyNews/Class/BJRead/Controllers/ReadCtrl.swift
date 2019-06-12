@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ReadCtrl: BJBaseViewController {
     
@@ -14,24 +15,31 @@ class ReadCtrl: BJBaseViewController {
     
     var myDataArray: NSMutableArray!
     
-    
-//    var baby = ["宝宝0","宝宝1","宝宝2","宝宝3","宝宝4","宝宝5","宝宝6","宝宝7","宝宝8","宝宝9","宝宝10","宝宝11"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.buildUI()
         
-        automaticallyAdjustsScrollViewInsets = false
-        
+        self.requestData()
+    }
+    
+    func requestData() {
         let path = Bundle.main.path(forResource: "wotMain", ofType: "json")
-        _ = URL(fileURLWithPath: path!)
         
-        let data = NSData.dataWithContentsOfMappedFile(path as! String) as! NSData
+        let data = NSData.init(contentsOfFile: path ?? "")
         
-        let dict:NSDictionary = try!  JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions()) as! NSDictionary
-//        myDataArray = dict.object(forKey: "data") as! NSArray as? NSMutableArray
-        
-
+        do {
+            let dict: NSDictionary = try JSONSerialization.jsonObject(with: data! as Data, options: JSONSerialization.ReadingOptions()) as! NSDictionary
+            print(dict)
+            self.myDataArray = NSMutableArray.init(array: (dict.object(forKey: "data") as! NSArray))
+            
+        } catch {
+            
+        }
+        self.myTableView.reloadData()
+    }
+    
+    func buildUI() {
         self.myTableView = UITableView.init(frame: self.view.bounds, style: UITableView.Style.plain)
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
@@ -43,51 +51,27 @@ class ReadCtrl: BJBaseViewController {
         
         //使用xib好像需要注册
         self.myTableView.register(UINib(nibName:"ReadCell" ,bundle:nil), forCellReuseIdentifier: "ReadCell")
-        
-        
-
-        
-                
-  
-//        let d:Data = Data(contentsOf: jsonURL)
-        
-//        let json:Any = JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.mutableContainers)
-//        let jsonDic = jsonas!Dictionary<String,Any>
-//        let datalist = jsonDic["data"]as!NSArray
-//        print(datalist)//输出数据
-    
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 
 extension ReadCtrl : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.myDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let readId = "ReadCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: readId, for: indexPath)
-        
+        let cell: ReadCell = tableView.dequeueReusableCell(withIdentifier: readId, for: indexPath) as! ReadCell
+        if self.myDataArray.count != 0 {
+            let dic: NSDictionary = self.myDataArray[indexPath.row] as! NSDictionary
+            cell.titleLabel.text = dic.object(forKey: "title") as? String
+            cell.detailLabel.text = dic.object(forKey: "digest") as? String
+            let urlStr = dic.object(forKey: "pictureUrl") as? String
+            let url = URL(string: urlStr ?? "")
+            cell.titleImage?.kf.setImage(with: url)
+        }
         return cell
     }
     

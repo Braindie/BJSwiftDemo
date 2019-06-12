@@ -33,20 +33,21 @@ class NewsCell: UITableViewCell {
     }
     
     
+    
     func buildUI(){
         
-        titleImage = UIImageView.init(frame: CGRect(x: 10, y: 10, width: 200, height: 80))
+        titleImage = UIImageView.init(frame: CGRect(x: 10, y: 10, width: 100, height: 80))
         titleImage!.layer.cornerRadius = 5
         titleImage!.layer.masksToBounds = true
-        titleImage?.backgroundColor = UIColor.gray
+        titleImage?.backgroundColor = UIColor.groupTableViewBackground
         self.addSubview(titleImage!)
         
-        titleLabel = UILabel.init(frame: CGRect(x: 230, y: 15, width: self.bounds.size.width-230, height: 30))
+        titleLabel = UILabel.init(frame: CGRect(x: 120, y: 15, width: kScreenWidth-130, height: 30))
         titleLabel?.text = "你好吗"
         titleLabel?.font = UIFont.systemFont(ofSize: 18)
         self.addSubview(titleLabel!)
         
-        detailLabel = UILabel.init(frame: CGRect(x: 230, y: 45, width: self.bounds.size.width-230, height: 60))
+        detailLabel = UILabel.init(frame: CGRect(x: 120, y: 45, width: kScreenWidth-130, height: 50))
         detailLabel?.text = "hello hi how are you"
         detailLabel?.font = UIFont.systemFont(ofSize: 13)
         detailLabel?.numberOfLines = 2;
