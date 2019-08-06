@@ -13,6 +13,7 @@ class DiscoverCtrl: BJBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "架构"
         // Do any additional setup after loading the view.
     }
 

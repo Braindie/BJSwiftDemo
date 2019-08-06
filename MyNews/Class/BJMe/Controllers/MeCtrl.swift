@@ -13,6 +13,7 @@ class MeCtrl: BJBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "功能"
         // Do any additional setup after loading the view.
     }
 

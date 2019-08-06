@@ -16,27 +16,27 @@ class BJTabbarViewController: UITabBarController {
         self.view.backgroundColor = UIColor.white
         
         let vc1 = NewsCtrl ()
-        let item1 : UITabBarItem = UITabBarItem (title: "首页", image: UIImage(named: "NewsImage"), selectedImage: UIImage(named: "NewsImageHigh"))
+        let item1 : UITabBarItem = UITabBarItem (title: "布局", image: UIImage(named: "NewsImage"), selectedImage: UIImage(named: "NewsImageHigh"))
         vc1.tabBarItem = item1
         let nav1: UINavigationController = UINavigationController.init(rootViewController: vc1)
         
         let vc2 = ReadCtrl ()
-        let item2 : UITabBarItem = UITabBarItem (title: "阅读", image: UIImage(named: "ReadImage"), selectedImage: UIImage(named: "ReadImageHigh"))
+        let item2 : UITabBarItem = UITabBarItem (title: "动画", image: UIImage(named: "ReadImage"), selectedImage: UIImage(named: "ReadImageHigh"))
         vc2.tabBarItem = item2
         let nav2: UINavigationController = UINavigationController.init(rootViewController: vc2)
         
         let vc3 = MediaCtrl ()
-        let item3 : UITabBarItem = UITabBarItem (title: "媒体", image: UIImage(named: "MediaImage"), selectedImage: UIImage(named: "MediaImageHigh"))
+        let item3 : UITabBarItem = UITabBarItem (title: "网络", image: UIImage(named: "MediaImage"), selectedImage: UIImage(named: "MediaImageHigh"))
         vc3.tabBarItem = item3
         let nav3: UINavigationController = UINavigationController.init(rootViewController: vc3)
         
         let vc4 = DiscoverCtrl ()
-        let item4 : UITabBarItem = UITabBarItem (title: "发现", image: UIImage(named: "DisImage"), selectedImage: UIImage(named: "DisImageHigh"))
+        let item4 : UITabBarItem = UITabBarItem (title: "架构", image: UIImage(named: "DisImage"), selectedImage: UIImage(named: "DisImageHigh"))
         vc4.tabBarItem = item4
         let nav4: UINavigationController = UINavigationController.init(rootViewController: vc4)
         
         let vc5 = MeCtrl ()
-        let item5 : UITabBarItem = UITabBarItem (title: "我的", image: UIImage(named: "MeImage"), selectedImage: UIImage(named: "MeImageHigh"))
+        let item5 : UITabBarItem = UITabBarItem (title: "功能", image: UIImage(named: "MeImage"), selectedImage: UIImage(named: "MeImageHigh"))
         vc5.tabBarItem = item5
         let nav5: UINavigationController = UINavigationController.init(rootViewController: vc5)
         
