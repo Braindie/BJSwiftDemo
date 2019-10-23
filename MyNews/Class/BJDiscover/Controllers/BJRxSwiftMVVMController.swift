@@ -16,6 +16,9 @@ class BJRxSwiftMVVMController: UIViewController {
     let passwordOutlet = UITextField()
     let doSomethingOutlet = UIButton()
     
+    var tableView: UITableView!
+    
+    
     var disposeBag = DisposeBag()
     
     // 逻辑层，它将用户输入行为，转换成输出状态
@@ -34,21 +37,33 @@ class BJRxSwiftMVVMController: UIViewController {
     
     // 绑定数据
     func bindData() {
+        // 初始化ViewModel
         viewModel = BJRxSwiftMVVMViewModel(
-            username: usernameOutlet.rx.text.orEmpty.asObservable(),
+            username: usernameOutlet.rx.text.orEmpty.asObservable(), // asObservable会返回一个Observable，可监听序列
             password: passwordOutlet.rx.text.orEmpty.asObservable()
         )
         
         viewModel.usernameValid
-            .bind(to: passwordOutlet.rx.isEnabled)
-            .disposed(by: disposeBag)
+            .bind(to: passwordOutlet.rx.isEnabled) // UI 观察者
+            .disposed(by: disposeBag) // 可被清除的资源
         
         viewModel.everythingValid
             .bind(to: doSomethingOutlet.rx.isEnabled)
             .disposed(by: disposeBag)
         
         doSomethingOutlet.rx.tap
-            .subscribe(onNext: { [weak self] in self?.showAlert() })
+            .subscribe(onNext: { [weak self] in self?.showAlert() }) // subscribe 创建观察者
+            .disposed(by: disposeBag)
+        
+        
+        
+        viewModel.arrayData.bind(to: tableView.rx.items(cellIdentifier:"cell")) { _, music, cell in
+            cell.textLabel?.text = music.name
+            cell.detailTextLabel?.text = music.singer
+        }.disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(Music.self)
+            .subscribe(onNext: { music in print("选中的是\(music)")})
             .disposed(by: disposeBag)
     }
     
@@ -66,6 +81,10 @@ class BJRxSwiftMVVMController: UIViewController {
         self.doSomethingOutlet.backgroundColor = UIColor.green
         self.doSomethingOutlet.setTitle("登录", for: UIControl.State.normal)
         self.view.addSubview(self.doSomethingOutlet)
+        
+        self.tableView = UITableView.init(frame: CGRect.init(x: 20, y: 250, width: self.view.bounds.width-40, height: 300), style: UITableView.Style.plain);
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.view.addSubview(self.tableView)
     }
     
     func showAlert() {

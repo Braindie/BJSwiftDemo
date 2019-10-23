@@ -27,6 +27,7 @@
 		E59FC58C235EEB730044DD4C /* RxSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FC58B235EEB730044DD4C /* RxSwiftController.swift */; };
 		E59FC58E235F0C8A0044DD4C /* BJRxSwiftMVVMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FC58D235F0C8A0044DD4C /* BJRxSwiftMVVMController.swift */; };
 		E59FC596235F0D5A0044DD4C /* BJRxSwiftMVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FC595235F0D5A0044DD4C /* BJRxSwiftMVVMViewModel.swift */; };
+		E5EF766B2360503500E521EA /* BJRxSwiftMVVMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF766A2360503500E521EA /* BJRxSwiftMVVMCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		E59FC58B235EEB730044DD4C /* RxSwiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftController.swift; sourceTree = "<group>"; };
 		E59FC58D235F0C8A0044DD4C /* BJRxSwiftMVVMController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMController.swift; sourceTree = "<group>"; };
 		E59FC595235F0D5A0044DD4C /* BJRxSwiftMVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMViewModel.swift; sourceTree = "<group>"; };
+		E5EF766A2360503500E521EA /* BJRxSwiftMVVMCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				E54C37EE1F97064C00825F8F /* Controllers */,
-				E54C37F11F97064C00825F8F /* Models */,
-				E54C37F21F97064C00825F8F /* Views */,
 			);
 			path = BJMe;
 			sourceTree = "<group>";
@@ -183,20 +183,6 @@
 				E54C37F01F97064C00825F8F /* MeCtrl.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E54C37F11F97064C00825F8F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		E54C37F21F97064C00825F8F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		E54C37F31F97064C00825F8F /* BJMedia */ = {
@@ -319,6 +305,7 @@
 		E59FC593235F0D3F0044DD4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E5EF766A2360503500E521EA /* BJRxSwiftMVVMCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +459,7 @@
 				E59FC596235F0D5A0044DD4C /* BJRxSwiftMVVMViewModel.swift in Sources */,
 				E54C38191F97401A00825F8F /* ReadCell.swift in Sources */,
 				E5580E6B22F9636200204F12 /* NewsCell.swift in Sources */,
+				E5EF766B2360503500E521EA /* BJRxSwiftMVVMCell.swift in Sources */,
 				E54C38051F97064C00825F8F /* DiscoverCtrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
