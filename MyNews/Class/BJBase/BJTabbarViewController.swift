@@ -20,12 +20,12 @@ class BJTabbarViewController: UITabBarController {
         vc1.tabBarItem = item1
         let nav1: UINavigationController = UINavigationController.init(rootViewController: vc1)
         
-        let vc2 = ReadCtrl ()
+        let vc2 = BJAnimationCtrl ()
         let item2 : UITabBarItem = UITabBarItem (title: "动画", image: UIImage(named: "ReadImage"), selectedImage: UIImage(named: "ReadImageHigh"))
         vc2.tabBarItem = item2
         let nav2: UINavigationController = UINavigationController.init(rootViewController: vc2)
         
-        let vc3 = MediaCtrl ()
+        let vc3 = BJNetworkCtrl ()
         let item3 : UITabBarItem = UITabBarItem (title: "网络", image: UIImage(named: "MediaImage"), selectedImage: UIImage(named: "MediaImageHigh"))
         vc3.tabBarItem = item3
         let nav3: UINavigationController = UINavigationController.init(rootViewController: vc3)

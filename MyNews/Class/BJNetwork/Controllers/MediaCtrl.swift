@@ -20,9 +20,7 @@ class MediaCtrl: BJBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.title = "网络"
-        
+                
         self.buildUI()
         
         self.requestData()

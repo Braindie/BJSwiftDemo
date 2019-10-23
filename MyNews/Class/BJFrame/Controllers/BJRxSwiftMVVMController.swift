@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class BJRxSwiftMVVMController: UIViewController {
+class BJRxSwiftMVVMController: BJBaseViewController {
     
     let usernameOutlet = UITextField()
     let passwordOutlet = UITextField()

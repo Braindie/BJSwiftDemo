@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 
-class RxSwiftController: UIViewController {
+class RxSwiftController: BJBaseViewController {
     
     let usernameTextField = UITextField()
     let passwordTextField = UITextField()

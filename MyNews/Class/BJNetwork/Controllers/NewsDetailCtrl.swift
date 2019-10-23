@@ -32,6 +32,5 @@ class NewsDetailCtrl: BJBaseViewController, WKUIDelegate {
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
         
-        
     }
 }
