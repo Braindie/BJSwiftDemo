@@ -13,6 +13,8 @@
 		E54A11CA22AE5A900000B007 /* BJTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A11C922AE5A900000B007 /* BJTabbarViewController.swift */; };
 		E54A11CC22AF5C090000B007 /* BJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A11CB22AF5C090000B007 /* BJBaseViewController.swift */; };
 		E54A11CF22AF79D00000B007 /* BJConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A11CE22AF79D00000B007 /* BJConfig.swift */; };
+		E55988832361B8B90062237D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55988822361B8B90062237D /* SwiftUIView.swift */; };
+		E55988852361B9900062237D /* BJSnapKitCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55988842361B9900062237D /* BJSnapKitCtrl.swift */; };
 		E56DB0641F988B480000A45D /* wotMain.json in Resources */ = {isa = PBXBuildFile; fileRef = E56DB0631F988B480000A45D /* wotMain.json */; };
 		E5EF768F23605C1E00E521EA /* BJRxSwiftMVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF766E23605C1D00E521EA /* BJRxSwiftMVVMViewModel.swift */; };
 		E5EF769023605C1E00E521EA /* BJRxSwiftMVVMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF767123605C1D00E521EA /* BJRxSwiftMVVMCell.swift */; };
@@ -30,7 +32,6 @@
 		E5EF76A323605EF300E521EA /* ReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF76A123605EF300E521EA /* ReadCell.swift */; };
 		E5EF76A423605EF300E521EA /* ReadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5EF76A223605EF300E521EA /* ReadCell.xib */; };
 		E5EF76A623605EFD00E521EA /* ReadCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF76A523605EFD00E521EA /* ReadCtrl.swift */; };
-		E5EF76A82360605300E521EA /* BJSwiftUICtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF76A72360605300E521EA /* BJSwiftUICtrl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		E54A11C922AE5A900000B007 /* BJTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJTabbarViewController.swift; sourceTree = "<group>"; };
 		E54A11CB22AF5C090000B007 /* BJBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJBaseViewController.swift; sourceTree = "<group>"; };
 		E54A11CE22AF79D00000B007 /* BJConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJConfig.swift; sourceTree = "<group>"; };
+		E55988822361B8B90062237D /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		E55988842361B9900062237D /* BJSnapKitCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJSnapKitCtrl.swift; sourceTree = "<group>"; };
 		E56DB0631F988B480000A45D /* wotMain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wotMain.json; sourceTree = "<group>"; };
 		E5EF766E23605C1D00E521EA /* BJRxSwiftMVVMViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMViewModel.swift; sourceTree = "<group>"; };
 		E5EF767123605C1D00E521EA /* BJRxSwiftMVVMCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMCell.swift; sourceTree = "<group>"; };
@@ -61,7 +64,6 @@
 		E5EF76A123605EF300E521EA /* ReadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadCell.swift; sourceTree = "<group>"; };
 		E5EF76A223605EF300E521EA /* ReadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadCell.xib; sourceTree = "<group>"; };
 		E5EF76A523605EFD00E521EA /* ReadCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadCtrl.swift; sourceTree = "<group>"; };
-		E5EF76A72360605300E521EA /* BJSwiftUICtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJSwiftUICtrl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				E5EF767A23605C1D00E521EA /* NewsCtrl.swift */,
-				E5EF76A72360605300E521EA /* BJSwiftUICtrl.swift */,
+				E55988822361B8B90062237D /* SwiftUIView.swift */,
+				E55988842361B9900062237D /* BJSnapKitCtrl.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -455,6 +459,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,9 +478,9 @@
 				E5EF769E23605C7200E521EA /* BJNetworkCtrl.swift in Sources */,
 				E5EF769223605C1E00E521EA /* DiscoverCtrl.swift in Sources */,
 				E5EF769023605C1E00E521EA /* BJRxSwiftMVVMCell.swift in Sources */,
+				E55988852361B9900062237D /* BJSnapKitCtrl.swift in Sources */,
 				E53448F51D22618D00C38AB4 /* AppDelegate.swift in Sources */,
 				E5EF769123605C1E00E521EA /* RxSwiftController.swift in Sources */,
-				E5EF76A82360605300E521EA /* BJSwiftUICtrl.swift in Sources */,
 				E5EF769B23605C1E00E521EA /* NewsCell.swift in Sources */,
 				E5EF76A623605EFD00E521EA /* ReadCtrl.swift in Sources */,
 				E54A11CC22AF5C090000B007 /* BJBaseViewController.swift in Sources */,
@@ -484,6 +489,7 @@
 				E5EF769823605C1E00E521EA /* NewsModel.swift in Sources */,
 				E5EF76A023605E5200E521EA /* BJAnimationCtrl.swift in Sources */,
 				E54A11CF22AF79D00000B007 /* BJConfig.swift in Sources */,
+				E55988832361B8B90062237D /* SwiftUIView.swift in Sources */,
 				E5EF769A23605C1E00E521EA /* NewsDetailCtrl.swift in Sources */,
 				E5EF769C23605C1E00E521EA /* MeCtrl.swift in Sources */,
 				E5EF769423605C1E00E521EA /* NewsCtrl.swift in Sources */,
