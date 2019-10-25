@@ -1,7 +1,6 @@
 PODS:
   - Alamofire (4.8.0)
   - Kingfisher (5.0.1)
-  - MJExtension (3.0.13)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -14,7 +13,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.8.0)
   - Kingfisher (~> 5.0.1)
-  - MJExtension (~> 3.0.13)
   - RxCocoa (~> 5.0)
   - RxSwift (~> 5.0)
   - SnapKit (~> 5.0.1)
@@ -24,7 +22,6 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Kingfisher
-    - MJExtension
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -34,13 +31,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
-  MJExtension: 5932755f451458eefa24239358817f8d291240c7
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 9ed9bca5c7dc3f1966f7d5b554c09ddadf14dd4d
+PODFILE CHECKSUM: a0f9a6e9a76b7f819f092abb38bc5b8426adfa5d
 
 COCOAPODS: 1.8.4
