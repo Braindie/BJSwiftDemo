@@ -13,7 +13,7 @@ class BJAnimationCtrl: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "动画"
+        self.navigationItem.title = "Draw"
         
         
     }

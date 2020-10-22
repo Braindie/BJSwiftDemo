@@ -11,7 +11,18 @@ import SwiftUI
 struct SwiftUIView: View {
     @available(iOS 13.0.0, *)
     var body: some View {
-        Text("我是SwiftUI，哈哈哈哈")
+        VStack(alignment: .center, spacing: 5) {
+            Text("我是SwiftUI，哈哈哈哈")
+                .font(.title)
+                .foregroundColor(.green)
+            HStack {
+                Text("副标题")
+                    .font(.subheadline)
+                Text("hahaha")
+                    .font(.subheadline)
+                    .foregroundColor(.orange)
+            }
+        }
     }
 }
 

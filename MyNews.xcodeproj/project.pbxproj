@@ -169,7 +169,6 @@
 			children = (
 				E5EF767223605C1D00E521EA /* Controllers */,
 				E5EF766D23605C1D00E521EA /* ViewModel */,
-				E5EF766F23605C1D00E521EA /* Model */,
 				E5EF767023605C1D00E521EA /* View */,
 			);
 			path = BJFrame;
@@ -181,13 +180,6 @@
 				E5EF766E23605C1D00E521EA /* BJRxSwiftMVVMViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		E5EF766F23605C1D00E521EA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E5EF767023605C1D00E521EA /* View */ = {
@@ -212,24 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				E5EF767923605C1D00E521EA /* Controllers */,
-				E5EF767723605C1D00E521EA /* Model */,
-				E5EF767823605C1D00E521EA /* View */,
 			);
 			path = BJLayout;
-			sourceTree = "<group>";
-		};
-		E5EF767723605C1D00E521EA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E5EF767823605C1D00E521EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E5EF767923605C1D00E521EA /* Controllers */ = {
@@ -246,17 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				E5EF767D23605C1D00E521EA /* Controllers */,
-				E5EF767C23605C1D00E521EA /* Models */,
-				E5EF767F23605C1D00E521EA /* Views */,
 			);
 			path = BJAnimation;
-			sourceTree = "<group>";
-		};
-		E5EF767C23605C1D00E521EA /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E5EF767D23605C1D00E521EA /* Controllers */ = {
@@ -265,13 +232,6 @@
 				E5EF769F23605E5200E521EA /* BJAnimationCtrl.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E5EF767F23605C1D00E521EA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		E5EF768223605C1D00E521EA /* BJNetwork */ = {
@@ -317,24 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				E5EF768D23605C1D00E521EA /* Controllers */,
-				E5EF768B23605C1D00E521EA /* Model */,
-				E5EF768C23605C1D00E521EA /* View */,
 			);
 			path = BJFunction;
-			sourceTree = "<group>";
-		};
-		E5EF768B23605C1D00E521EA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E5EF768C23605C1D00E521EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E5EF768D23605C1D00E521EA /* Controllers */ = {
@@ -379,7 +323,6 @@
 				TargetAttributes = {
 					E53448F01D22618D00C38AB4 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 3KN87CF8LK;
 						LastSwiftMigration = 0830;
 					};
 				};
@@ -610,7 +553,7 @@
 			baseConfigurationReference = C10A5F24A8C6B3C615E04BA6 /* Pods-MyNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3KN87CF8LK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -625,7 +568,7 @@
 			baseConfigurationReference = 12B38B194E73D4AA63B3F350 /* Pods-MyNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3KN87CF8LK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

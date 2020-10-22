@@ -19,7 +19,7 @@ class NewsCtrl: BJBaseViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "布局"
+        self.navigationItem.title = "Layout"
 
         self.tableView.frame = self.view.bounds
         self.tableView.delegate = self

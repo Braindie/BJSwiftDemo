@@ -18,7 +18,7 @@ class BJNetworkCtrl: BJBaseViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "网络"
+        self.navigationItem.title = "Data"
 
         self.tableView.frame = self.view.bounds
         self.tableView.delegate = self

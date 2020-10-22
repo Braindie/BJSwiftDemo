@@ -18,7 +18,7 @@ class DiscoverCtrl: BJBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "架构"
+        self.navigationItem.title = "Frame"
         
         self.buildUI()
     }
