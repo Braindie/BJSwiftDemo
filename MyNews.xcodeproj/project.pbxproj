@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A44517E225921825001F8556 /* RxSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44517D925921825001F8556 /* RxSwiftController.swift */; };
+		A44517E325921825001F8556 /* BJRxSwiftMVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44517DC25921825001F8556 /* BJRxSwiftMVVMViewModel.swift */; };
+		A44517E425921825001F8556 /* BJRxSwiftMVVMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44517DE25921825001F8556 /* BJRxSwiftMVVMCell.swift */; };
+		A44517E525921825001F8556 /* BJRxSwiftMVVMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44517E025921825001F8556 /* BJRxSwiftMVVMController.swift */; };
+		A44517E625921825001F8556 /* DiscoverCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44517E125921825001F8556 /* DiscoverCtrl.swift */; };
+		A44517EB25921929001F8556 /* BJPromiseKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44517EA25921929001F8556 /* BJPromiseKitController.swift */; };
 		BD151190D99B5F509D6FC403 /* Pods_MyNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1A03FA07DCA72FF8070D68 /* Pods_MyNews.framework */; };
 		E53448F51D22618D00C38AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53448F41D22618D00C38AB4 /* AppDelegate.swift */; };
 		E53448FC1D22618D00C38AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53448FB1D22618D00C38AB4 /* Assets.xcassets */; };
@@ -16,11 +22,6 @@
 		E55988832361B8B90062237D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55988822361B8B90062237D /* SwiftUIView.swift */; };
 		E55988852361B9900062237D /* BJSnapKitCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55988842361B9900062237D /* BJSnapKitCtrl.swift */; };
 		E56DB0641F988B480000A45D /* wotMain.json in Resources */ = {isa = PBXBuildFile; fileRef = E56DB0631F988B480000A45D /* wotMain.json */; };
-		E5EF768F23605C1E00E521EA /* BJRxSwiftMVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF766E23605C1D00E521EA /* BJRxSwiftMVVMViewModel.swift */; };
-		E5EF769023605C1E00E521EA /* BJRxSwiftMVVMCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF767123605C1D00E521EA /* BJRxSwiftMVVMCell.swift */; };
-		E5EF769123605C1E00E521EA /* RxSwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF767323605C1D00E521EA /* RxSwiftController.swift */; };
-		E5EF769223605C1E00E521EA /* DiscoverCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF767423605C1D00E521EA /* DiscoverCtrl.swift */; };
-		E5EF769323605C1E00E521EA /* BJRxSwiftMVVMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF767523605C1D00E521EA /* BJRxSwiftMVVMController.swift */; };
 		E5EF769423605C1E00E521EA /* NewsCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF767A23605C1D00E521EA /* NewsCtrl.swift */; };
 		E5EF769823605C1E00E521EA /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF768423605C1D00E521EA /* NewsModel.swift */; };
 		E5EF769923605C1E00E521EA /* MediaCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF768623605C1D00E521EA /* MediaCtrl.swift */; };
@@ -36,6 +37,12 @@
 
 /* Begin PBXFileReference section */
 		12B38B194E73D4AA63B3F350 /* Pods-MyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyNews/Pods-MyNews.release.xcconfig"; sourceTree = "<group>"; };
+		A44517D925921825001F8556 /* RxSwiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftController.swift; sourceTree = "<group>"; };
+		A44517DC25921825001F8556 /* BJRxSwiftMVVMViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMViewModel.swift; sourceTree = "<group>"; };
+		A44517DE25921825001F8556 /* BJRxSwiftMVVMCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMCell.swift; sourceTree = "<group>"; };
+		A44517E025921825001F8556 /* BJRxSwiftMVVMController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMController.swift; sourceTree = "<group>"; };
+		A44517E125921825001F8556 /* DiscoverCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCtrl.swift; sourceTree = "<group>"; };
+		A44517EA25921929001F8556 /* BJPromiseKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJPromiseKitController.swift; sourceTree = "<group>"; };
 		AC1A03FA07DCA72FF8070D68 /* Pods_MyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10A5F24A8C6B3C615E04BA6 /* Pods-MyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyNews/Pods-MyNews.debug.xcconfig"; sourceTree = "<group>"; };
 		E53448F11D22618D00C38AB4 /* MyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,11 +55,6 @@
 		E55988822361B8B90062237D /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		E55988842361B9900062237D /* BJSnapKitCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJSnapKitCtrl.swift; sourceTree = "<group>"; };
 		E56DB0631F988B480000A45D /* wotMain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wotMain.json; sourceTree = "<group>"; };
-		E5EF766E23605C1D00E521EA /* BJRxSwiftMVVMViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMViewModel.swift; sourceTree = "<group>"; };
-		E5EF767123605C1D00E521EA /* BJRxSwiftMVVMCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMCell.swift; sourceTree = "<group>"; };
-		E5EF767323605C1D00E521EA /* RxSwiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftController.swift; sourceTree = "<group>"; };
-		E5EF767423605C1D00E521EA /* DiscoverCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCtrl.swift; sourceTree = "<group>"; };
-		E5EF767523605C1D00E521EA /* BJRxSwiftMVVMController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJRxSwiftMVVMController.swift; sourceTree = "<group>"; };
 		E5EF767A23605C1D00E521EA /* NewsCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCtrl.swift; sourceTree = "<group>"; };
 		E5EF768423605C1D00E521EA /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		E5EF768623605C1D00E521EA /* MediaCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCtrl.swift; sourceTree = "<group>"; };
@@ -93,6 +95,56 @@
 				12B38B194E73D4AA63B3F350 /* Pods-MyNews.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A44517D825921825001F8556 /* RXSwift */ = {
+			isa = PBXGroup;
+			children = (
+				A44517D925921825001F8556 /* RxSwiftController.swift */,
+			);
+			path = RXSwift;
+			sourceTree = "<group>";
+		};
+		A44517DA25921825001F8556 /* MVVM+RXSwift */ = {
+			isa = PBXGroup;
+			children = (
+				A44517DF25921825001F8556 /* Controllers */,
+				A44517DB25921825001F8556 /* ViewModel */,
+				A44517DD25921825001F8556 /* View */,
+			);
+			path = "MVVM+RXSwift";
+			sourceTree = "<group>";
+		};
+		A44517DB25921825001F8556 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A44517DC25921825001F8556 /* BJRxSwiftMVVMViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A44517DD25921825001F8556 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A44517DE25921825001F8556 /* BJRxSwiftMVVMCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A44517DF25921825001F8556 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A44517E025921825001F8556 /* BJRxSwiftMVVMController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A44517E92592190C001F8556 /* PromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				A44517EA25921929001F8556 /* BJPromiseKitController.swift */,
+			);
+			path = PromiseKit;
 			sourceTree = "<group>";
 		};
 		E53448E81D22618D00C38AB4 = {
@@ -167,37 +219,12 @@
 		E5EF766C23605C1D00E521EA /* BJFrame */ = {
 			isa = PBXGroup;
 			children = (
-				E5EF767223605C1D00E521EA /* Controllers */,
-				E5EF766D23605C1D00E521EA /* ViewModel */,
-				E5EF767023605C1D00E521EA /* View */,
+				A44517E125921825001F8556 /* DiscoverCtrl.swift */,
+				A44517DA25921825001F8556 /* MVVM+RXSwift */,
+				A44517D825921825001F8556 /* RXSwift */,
+				A44517E92592190C001F8556 /* PromiseKit */,
 			);
 			path = BJFrame;
-			sourceTree = "<group>";
-		};
-		E5EF766D23605C1D00E521EA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				E5EF766E23605C1D00E521EA /* BJRxSwiftMVVMViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		E5EF767023605C1D00E521EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E5EF767123605C1D00E521EA /* BJRxSwiftMVVMCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E5EF767223605C1D00E521EA /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E5EF767423605C1D00E521EA /* DiscoverCtrl.swift */,
-				E5EF767323605C1D00E521EA /* RxSwiftController.swift */,
-				E5EF767523605C1D00E521EA /* BJRxSwiftMVVMController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E5EF767623605C1D00E521EA /* BJLayout */ = {
@@ -387,6 +414,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-MyNews/Pods-MyNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -397,6 +425,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -415,26 +444,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5EF768F23605C1E00E521EA /* BJRxSwiftMVVMViewModel.swift in Sources */,
+				A44517E425921825001F8556 /* BJRxSwiftMVVMCell.swift in Sources */,
 				E5EF769E23605C7200E521EA /* BJNetworkCtrl.swift in Sources */,
-				E5EF769223605C1E00E521EA /* DiscoverCtrl.swift in Sources */,
-				E5EF769023605C1E00E521EA /* BJRxSwiftMVVMCell.swift in Sources */,
 				E55988852361B9900062237D /* BJSnapKitCtrl.swift in Sources */,
 				E53448F51D22618D00C38AB4 /* AppDelegate.swift in Sources */,
-				E5EF769123605C1E00E521EA /* RxSwiftController.swift in Sources */,
 				E5EF769B23605C1E00E521EA /* NewsCell.swift in Sources */,
 				E5EF76A623605EFD00E521EA /* ReadCtrl.swift in Sources */,
 				E54A11CC22AF5C090000B007 /* BJBaseViewController.swift in Sources */,
 				E54A11CA22AE5A900000B007 /* BJTabbarViewController.swift in Sources */,
-				E5EF769323605C1E00E521EA /* BJRxSwiftMVVMController.swift in Sources */,
+				A44517EB25921929001F8556 /* BJPromiseKitController.swift in Sources */,
 				E5EF769823605C1E00E521EA /* NewsModel.swift in Sources */,
+				A44517E525921825001F8556 /* BJRxSwiftMVVMController.swift in Sources */,
+				A44517E325921825001F8556 /* BJRxSwiftMVVMViewModel.swift in Sources */,
 				E5EF76A023605E5200E521EA /* BJAnimationCtrl.swift in Sources */,
 				E54A11CF22AF79D00000B007 /* BJConfig.swift in Sources */,
+				A44517E225921825001F8556 /* RxSwiftController.swift in Sources */,
 				E55988832361B8B90062237D /* SwiftUIView.swift in Sources */,
 				E5EF769A23605C1E00E521EA /* NewsDetailCtrl.swift in Sources */,
 				E5EF769C23605C1E00E521EA /* MeCtrl.swift in Sources */,
 				E5EF769423605C1E00E521EA /* NewsCtrl.swift in Sources */,
 				E5EF769923605C1E00E521EA /* MediaCtrl.swift in Sources */,
+				A44517E625921825001F8556 /* DiscoverCtrl.swift in Sources */,
 				E5EF76A323605EF300E521EA /* ReadCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,7 +589,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuile.meetings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -574,7 +604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuile.meetings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

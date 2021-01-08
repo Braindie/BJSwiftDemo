@@ -10,7 +10,7 @@ import UIKit
 
 class DiscoverCtrl: BJBaseViewController {
     
-    let myDataArray = ["RxSwift", "RxSwift+MVVM"]
+    let myDataArray = ["RxSwift", "RxSwift+MVVM", "PromiseKit"]
     
     let tableView = UITableView()
     
@@ -33,7 +33,7 @@ class DiscoverCtrl: BJBaseViewController {
 
 extension DiscoverCtrl: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,6 +53,11 @@ extension DiscoverCtrl: UITableViewDataSource, UITableViewDelegate {
             self.hidesBottomBarWhenPushed = false
         } else if indexPath.row == 1 {
             let vc = BJRxSwiftMVVMController.init()
+            self.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+            self.hidesBottomBarWhenPushed = false
+        } else if indexPath.row == 2 {
+            let vc = BJPromiseKitController.init()
             self.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
             self.hidesBottomBarWhenPushed = false

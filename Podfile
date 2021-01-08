@@ -11,4 +11,7 @@ target 'MyNews' do
     pod 'RxSwift', '~> 5.0'
     pod 'RxCocoa', '~> 5.0'
     pod 'SnapKit', '~> 5.0.1'
+    
+    pod "PromiseKit", '6.8'
+    pod "PromiseKit/Foundation"
 end
